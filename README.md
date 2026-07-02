@@ -1,16 +1,41 @@
-# React + Vite
+# EventPay
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Plataforma de venda de ingressos online com checkout, QR Code verificável e validação antifraude — construída para resolver um problema real: **garantir que o ingresso vendido seja o ingresso que entra**.
 
-Currently, two official plugins are available:
+> Em construção pública. Cada módulo é commitado, documentado e publicado antes do próximo começar.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Por que esse projeto existe
 
-## React Compiler
+Organizadores de eventos precisam de confiança em 3 pontos: o pagamento é real, o ingresso não pode ser duplicado, e uma contestação de pagamento (chargeback) não pode continuar dando acesso a alguém. É esse o problema que o EventPay resolve.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Stack
 
-## Expanding the ESLint configuration
+- **Frontend:** React + Vite
+- **Backend (em progresso):** Firebase (Auth, Firestore, Cloud Functions)
+- **Pagamento (em progresso):** Stripe Checkout + Webhooks
+- **Identificação de ingresso (em progresso):** QR Code com validação server-side
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Status atual
+
+- [x] Estrutura do projeto (Vite + React)
+- [x] Git configurado e versionado publicamente
+- [ ] Autenticação de usuário (Firebase Auth)
+- [ ] Cadastro e listagem de eventos
+- [ ] Checkout com Stripe
+- [ ] Webhook de confirmação de pagamento
+- [ ] Geração de ticket com QR Code
+- [ ] Validação antifraude / check-in
+- [ ] Tratamento de chargeback e disputa
+
+## Como rodar localmente
+
+\`\`\`bash
+git clone https://github.com/AlexMell01/eventpay.git
+cd eventpay
+npm install
+npm run dev
+\`\`\`
+
+## Autor
+
+Alexsandro Costa — [LinkedIn](https://www.linkedin.com/in/alex-costa-2b46bb1a9/) · [GitHub](https://github.com/AlexMell01)
